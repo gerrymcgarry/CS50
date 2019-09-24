@@ -30,7 +30,7 @@ int main(int argc, const char *args[])
                 ciphertext[i] = ciphertext[i] - 26;
             }
         }
-        cd if (plaintext[i] >= 'A' && plaintext[i] <= 'Z')
+        if (plaintext[i] >= 'A' && plaintext[i] <= 'Z')
         {
             ciphertext[i] = (plaintext[i] + key % 26);
             if (ciphertext[i] > 'Z')
