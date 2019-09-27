@@ -11,7 +11,6 @@ int main(int argc, const char *args[])
         return (1);
     }
     int key = atoi(args[1]);
-    //printf("%s %d-\n", args[1], key);
     string plaintext = get_string("plaintext: ");
     string ciphertext = plaintext;
     int strLen = strlen(plaintext);

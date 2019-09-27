@@ -27,10 +27,7 @@ int main(int argc, string argv[])
              argv[1][i] = argv[1][i] + 32;
            
         }
-        //printf("%s\n", argv[1]);
     }
-    
-    // get text to encrypt
     string plaintext = get_string("plaintext: ");
     string ciphertext = plaintext;
     int strLen = strlen(plaintext);
@@ -39,7 +36,6 @@ int main(int argc, string argv[])
     {
         int key = argv[1][j]-97;
         int character = plaintext[i];
-        //printf("%c %c %d %d\n", plaintext[i], argv[1][j],key-97, character-97);
         if (plaintext[i] >= 'a' && plaintext[i] <= 'z')
         {
             int newKey = key % 26;
