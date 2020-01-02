@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <cs50.h>
 #include <math.h>
 int main(void)
@@ -15,7 +16,7 @@ int main(void)
         if (i % 2)
         {
             int d = num % 10 * 2;
-            if (d > 9)submit50 cs50/2018/x/credit
+            if (d > 9)
             {
                 d = (d - 10) + 1;
             }
