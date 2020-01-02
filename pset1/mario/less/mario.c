@@ -21,23 +21,12 @@ int main(void)
         buffer[strlen(buffer) - 1] = 0;
         num = strtol(buffer, &end, 10);
     }
-    while (end != buffer + strlen(buffer) || num < 0 || num > 23 || strlen(buffer) == 0);
+    while (end != buffer + strlen(buffer) || num < 1 || num > 8 || strlen(buffer) == 0);
 
     /* Displays the half Pyramid */
     for (int x = 1; x <= num ; x++)
     {
-        for (int y = num; y >= 0 ; y--)
-        {
-            if (y <= x)
-            {
-                printf("#");
-            }
-            else
-            {
-                printf(" ");
-            }
-        }
-        for (int y = num; y >= 0 ; y--)
+        for (int y = num; y > 0 ; y--)
         {
             if (y <= x)
             {
