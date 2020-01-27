@@ -62,7 +62,6 @@ bool load(const char *dictionary)
         table[index]->next = new_node;
 
     }
-
     return false;
 }
 
