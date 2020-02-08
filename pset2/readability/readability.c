@@ -27,7 +27,7 @@ int main(void)
             words++;
         }
         // Count the number of sentences in the text. any occurrence of a period, exclamation point, or question mark indicates the end of a sentence.
-        if (text[i] == '.' || text[i] == '.' || text[i] == '?')
+        if (text[i] == '.' || text[i] == '!' || text[i] == '?')
         {
             sentences++;
         }

@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include "dictionary.h"
 #include <string.h>
+int dict_size = 0;
 // Represents a node in a hash table
 typedef struct node
 {
@@ -33,7 +34,7 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO
-    return 0;
+    return word[0]-97;
 }
 
 // Loads dictionary into memory, returning true if successful else false
@@ -50,6 +51,7 @@ bool load(const char *dictionary)
     // Read strings from file one at a time
     while(fscanf(inptr, "%s", dict_word) != EOF)
     {
+        dict_size++;
         // Create a new node for each word
         node *new_node = malloc(sizeof(node));
         strcpy(new_node->word, dict_word);
@@ -62,6 +64,8 @@ bool load(const char *dictionary)
         table[index]->next = new_node;
 
     }
+
+
     return false;
 }
 
@@ -69,7 +73,7 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     // TODO
-    return 0;
+    return dict_size;
 }
 
 // Unloads dictionary from memory, returning true if successful else false
